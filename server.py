@@ -24,6 +24,7 @@ async def handler(websocket, path):
         async for msg in websocket:
             global device_count
             device_count = msg
+            print(msg)
     finally:
         clients.remove(websocket)
  
